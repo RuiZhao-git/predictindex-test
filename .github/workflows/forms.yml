@@ -32,16 +32,19 @@ permissions:
   issues: write
   actions: write
 
-concurrency:
-  group: form-${{ github.event.issue.number }}
-  cancel-in-progress: false
-
 jobs:
   form:
     if: >-
       github.event.issue.state == 'open' &&
       contains(join(github.event.issue.labels.*.name, ','), 'form: ') &&
       (github.event.action != 'labeled' || github.event.label.name == 'approved')
+    # One run per issue at a time. Set on the job rather than the workflow, so
+    # that the runs for the labels a new issue arrives with (skipped by the
+    # condition above) never queue behind, or replace, the run that reads the
+    # form (seen in the test repository, 2026-11-24).
+    concurrency:
+      group: form-${{ github.event.issue.number }}
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
