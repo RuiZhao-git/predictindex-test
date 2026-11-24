@@ -3,8 +3,9 @@
     python3 -m unittest discover -s tests
 
 Every rule is tried on made-up data in a temporary folder, so the tests do not
-depend on which studies the repository holds; one test checks that the
-repository's own data passes.
+depend on which studies the repository holds. Whether the repository's own data
+passes is checked by `predictindex.py check`, a step of its own in the Deploy
+workflow.
 """
 
 import importlib.util
@@ -88,13 +89,6 @@ class Data(unittest.TestCase):
         self.assertEqual(len(found), 1, found)
         for w in words:
             self.assertIn(w, found[0])
-
-
-class TheRepositorysOwnData(unittest.TestCase):
-    def test_passes_the_checks(self):
-        problems, _, studies = pi.load(REPO)
-        self.assertEqual(problems, [])
-        self.assertTrue(studies)
 
 
 class Checks(Data):

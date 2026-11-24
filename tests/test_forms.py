@@ -571,14 +571,10 @@ class FormsAndScriptAgree(unittest.TestCase):
         self.assertIn("What should change?", labels)
         self.assertIn('labels: ["form: other"]', text)
 
-    def test_the_generated_parts_are_up_to_date(self):
-        work = Path(tempfile.mkdtemp())
-        try:
-            for part in ("options.json", "studies", ".github/ISSUE_TEMPLATE"):
-                (shutil.copytree if (REPO / part).is_dir() else shutil.copy)(REPO / part, work / part)
-            self.assertEqual(pi.sync(work), [], "run: python3 .github/scripts/predictindex.py sync")
-        finally:
-            shutil.rmtree(work)
+    # Whether the repository's data passes the checks and whether the generated
+    # parts of its forms are up to date is not tested here: the Deploy workflow
+    # checks the data in a step of its own, with a plain message, and brings the
+    # forms up to date itself (a study renamed in GitHub's editor, 2026-11-24).
 
 
 if __name__ == "__main__":
