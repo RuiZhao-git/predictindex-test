@@ -16,6 +16,7 @@ body:
       description: "Choose the study. The list shows every study on PredictIndex, newest first."
       options:
         # generated: studies (written by .github/scripts/predictindex.py sync; do not edit by hand)
+        - "Prefill test study"
         - "Test study eight (at once)"
         - "Test study eight (at once) 0322"
         - "Test study seven (at once)"
