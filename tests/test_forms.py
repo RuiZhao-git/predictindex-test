@@ -86,7 +86,8 @@ class Forms(unittest.TestCase):
                         mock.patch.object(pi, "link_status", lambda url: 403 if "private" in url else
                                           None if "offline" in url else 200),
                         mock.patch.object(pi, "today", lambda: "2026-11-24"),
-                        mock.patch.dict(os.environ, {"MAINTAINER": "hannah kirsten", "RUN_URL": ""})]
+                        mock.patch.dict(os.environ, {"MAINTAINER": "hannah kirsten", "RUN_URL": "", "SITE_URL": "",
+                                                     "GITHUB_REPOSITORY": "predcommlab/network-datasets"})]
         for p in self.patches:
             p.start()
 
