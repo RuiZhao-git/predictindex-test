@@ -7,6 +7,7 @@
   "paper": "10.1016/j.isci.2024.110611",
   "dataUrl": "https://osf.io/9tj57/",
   "participants": "30",
+  "sessions": "2",
   "added": "2026-11-24",
   "labels": {
     "species": [
@@ -15,17 +16,12 @@
     "population": [
       "Clinical: autism"
     ],
-    "ageGroup": [
-      "Adults"
-    ],
     "stimulus": [
-      "Speech"
+      "Speech",
+      "Video"
     ],
     "technique": [
       "EEG"
     ]
-  },
-  "descriptions": {
-    "stimulus": "Speech, synthetic vowels"
   }
 }
