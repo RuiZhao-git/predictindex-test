@@ -21,6 +21,7 @@ body:
         - "Test study seven (at once)"
         - "Test study three (corrected)"
         - "Test study two (waits for approval)"
+        - "Test study two (waits for approval) 0321"
         - "Expectation suppression and statistical learning"
         - "Adaptive Information Sampling Under Uncertainty"
         - "Bayesian Inference Voice Priors (behavioural)"
