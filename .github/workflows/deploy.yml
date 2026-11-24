@@ -58,9 +58,9 @@ jobs:
           python3 -B .github/scripts/predictindex.py build --out _site/studies.js
           cp -R index.html fonts img _site/
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
       - id: pages
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
