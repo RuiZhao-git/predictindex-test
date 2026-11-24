@@ -165,6 +165,7 @@ body:
         - label: "Visual"
         - label: "Somatosensory"
         - label: "Cross-modal"
+        - label: "Olfactory"
   - type: checkboxes
     id: label_stimulus
     attributes:
