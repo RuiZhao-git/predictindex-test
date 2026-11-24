@@ -17,6 +17,7 @@ body:
       options:
         # generated: studies (written by .github/scripts/predictindex.py sync; do not edit by hand)
         - "Test study eight (at once)"
+        - "Test study one (forms test)"
         - "Test study seven (at once)"
         - "Test study three (corrected)"
         - "Test study two (waits for approval)"
