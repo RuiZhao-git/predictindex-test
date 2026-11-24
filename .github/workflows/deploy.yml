@@ -17,21 +17,20 @@ on:
     branches: [main]
   workflow_dispatch:
 
-permissions:
-  contents: write
-  pages: write
-  id-token: write
+permissions: {}
 
 concurrency:
   group: pages
   cancel-in-progress: false
 
+# Two jobs, as in GitHub's own example: an uploaded page is not always visible
+# to the deployment within the same second (seen 2026-11-24), and the second
+# job starts some seconds after the first has finished.
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.pages.outputs.page_url }}
+    permissions:
+      contents: write  # to push the forms' lists
     steps:
       - uses: actions/checkout@v4
         with:
@@ -62,5 +61,15 @@ jobs:
         with:
           path: _site
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write     # to publish the page
+      id-token: write  # to show GitHub that the page comes from this workflow
+    environment:
+      name: github-pages
+      url: ${{ steps.pages.outputs.page_url }}
+    steps:
       - id: pages
         uses: actions/deploy-pages@v5
