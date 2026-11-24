@@ -1,0 +1,26 @@
+{
+  "name": "Prefill test study",
+  "paperTitle": "Opposing serial effects of stimulus and choice in speech perception scale with context variability",
+  "authors": "Ann Tester & Ben Tester",
+  "correspondingAuthor": "Ann Tester",
+  "published": true,
+  "paper": "10.1016/j.isci.2024.110611",
+  "dataUrl": "https://osf.io/9tj57/",
+  "participants": "30",
+  "added": "2026-11-24",
+  "labels": {
+    "species": [
+      "Human"
+    ],
+    "population": [
+      "Clinical: schizophrenia",
+      "Healthy"
+    ],
+    "ageGroup": [
+      "Adults"
+    ],
+    "technique": [
+      "EEG"
+    ]
+  }
+}
