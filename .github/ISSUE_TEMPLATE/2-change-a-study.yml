@@ -16,6 +16,7 @@ body:
       description: "Choose the study. The list shows every study on PredictIndex, newest first."
       options:
         # generated: studies (written by .github/scripts/predictindex.py sync; do not edit by hand)
+        - "Test study one (forms test)"
         - "Expectation suppression and statistical learning"
         - "Adaptive Information Sampling Under Uncertainty"
         - "Bayesian Inference Voice Priors (behavioural)"
