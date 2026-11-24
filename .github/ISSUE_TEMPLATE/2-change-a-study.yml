@@ -17,6 +17,7 @@ body:
       options:
         # generated: studies (written by .github/scripts/predictindex.py sync; do not edit by hand)
         - "Test study one (forms test)"
+        - "Test study two (waits for approval)"
         - "Expectation suppression and statistical learning"
         - "Adaptive Information Sampling Under Uncertainty"
         - "Bayesian Inference Voice Priors (behavioural)"
