@@ -18,7 +18,6 @@ body:
         # generated: studies (written by .github/scripts/predictindex.py sync; do not edit by hand)
         - "Test study eight (at once)"
         - "Test study eight (at once) 0322"
-        - "Test study one (forms test)"
         - "Test study seven (at once)"
         - "Test study seven (at once) 0322"
         - "Test study three (corrected)"
