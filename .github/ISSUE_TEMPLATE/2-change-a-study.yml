@@ -16,6 +16,7 @@ body:
       description: "Choose the study. The list shows every study on PredictIndex, newest first."
       options:
         # generated: studies (written by .github/scripts/predictindex.py sync; do not edit by hand)
+        - "Test study four (label test)"
         - "Test study one (forms test)"
         - "Test study three (corrected)"
         - "Test study two (waits for approval)"
